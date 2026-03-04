@@ -9,11 +9,15 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - project.qmd
+      - gallery.qmd
+      - Education.qmd
+      - resume.qmd
 
 format:
   html:
     theme:
-      - cosmo
+      - lux
       - brand
     css: styles.css
     toc: true
