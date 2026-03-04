@@ -1,5 +1,24 @@
 ---
-title: "Hambee Makinoda"
+title: "Hambee Makinoda" 
+image: mypic.jpg
+toc: false
+about:
+  template: trestles
+  image-shape: rectangle
+  image-width: 17em
+  links:
+  - icon: linkedin
+    text: LinkedIn
+    href: https://www.linkedin.com/feed/
+  - icon: github
+    text: GitHub
+    href: https://github.com/Hambanana0923
+  - icon: email
+    text: Email
+    href: mailto:hambee@ucsb.edu
+  - icon: instagram
+    text: Instagram
+    href: https://www.instagram.com/hambee_m/
 ---
 
 My name is Hambee Makinoda (Pronounced "Han-bay"). I am third year Environmental Studies and Biological Sciences B.S. major at UCSB. My hobbies are being active and playing soccer, basketball, and volleyball.
