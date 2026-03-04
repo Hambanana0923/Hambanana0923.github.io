@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Hambanana0923.github.io"
+  title: "Hambee Makinoda"
   navbar:
     left:
       - href: index.qmd
@@ -17,6 +17,7 @@ format:
       - brand
     css: styles.css
     toc: true
+    page-layout: full
 
 editor: visual
 
