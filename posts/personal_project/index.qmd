@@ -13,4 +13,186 @@ citation:
 image: preview-image.png
 draft: false
 ---
+## Research Objectives
+One of the research projects I am currently working on focuses on how political parties express interest in sustainability and climate-related issues across different national contexts. My current case studies are South Africa and Japan, where I analyze party manifestos to understand how sustainability is framed and prioritized in political language.
 
+## Quasi Sentences
+The project begins by breaking manifesto text into quasi-sentences, which are smaller meaning units that allow a single sentence containing multiple policy ideas to be separated into more precise analytical fragments. This is important because political statements often bundle several topics together. By splitting them into quasi-sentences, I can better isolate individual policy commitments and issue areas for coding.
+
+::: {.callout-note collapse="false" title="Code to generate quasi sentences"}
+This code generates quasi sentences by first scanning the pdf to see whether or not it can be read as text or scanned picture (if scanned, resort to ORF). Then this code splits the sentences in political manifestos using certain indications like periods, commas, colons, semicolons, etc. Then it is stored as a csv with a row that randomly flags 1% of the rows for manual checking for accuracy.
+:::
+```{r}
+#| message: false
+#| warning: false
+#| echo: true
+#| eval: false
+packages <- c("pdftools", "stringr", "tibble", "writexl", "magick", "tesseract")
+
+for (p in packages) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    install.packages(p)
+  }
+}
+
+pdf_path <- "ldp.pdf"
+
+extract_text_normal <- function(pdf_path) {
+  text <- tryCatch(
+    pdftools::pdf_text(pdf_path),
+    error = function(e) NULL
+  )
+  
+  if (is.null(text)) return(NULL)
+  
+  full_text <- paste(text, collapse = "\n")
+  full_text <- stringr::str_trim(full_text)
+  
+  if (nchar(full_text) < 50) return(NULL)
+  
+  return(full_text)
+}
+
+extract_text_ocr <- function(pdf_path, dpi = 300, language = "eng") {
+  img <- magick::image_read_pdf(pdf_path, density = dpi)
+  
+  text_pages <- vapply(seq_along(img), function(i) {
+    page_img <- img[i]
+    tesseract::ocr(page_img, engine = tesseract::tesseract(language))
+  }, character(1))
+  
+  full_text <- paste(text_pages, collapse = "\n")
+  full_text <- stringr::str_trim(full_text)
+  
+  return(full_text)
+}
+
+clean_text <- function(text) {
+  text |>
+    stringr::str_replace_all("\r", "\n") |>
+    stringr::str_replace_all("[ \t]+", " ") |>
+    stringr::str_replace_all("\n{2,}", "\n") |>
+    stringr::str_remove_all("(?m)^\\s*\\d+\\s*$") |>
+    stringr::str_replace_all("[•●▪◦]", " • ") |>
+    stringr::str_trim()
+}
+
+extract_clean_text <- function(pdf_path, dpi = 300, language = "eng") {
+  text <- extract_text_normal(pdf_path)
+  
+  method_used <- "normal pdf text extraction"
+  
+  if (is.null(text) || nchar(stringr::str_squish(text)) < 50) {
+    message("Normal PDF parsing failed or returned too little text. Switching to OCR...")
+    text <- extract_text_ocr(pdf_path, dpi = dpi, language = language)
+    method_used <- "OCR"
+  }
+  
+  if (is.null(text) || nchar(stringr::str_squish(text)) < 20) {
+    stop("Could not extract usable text from the PDF, even with OCR.")
+  }
+  
+  text <- clean_text(text)
+  
+  attr(text, "method_used") <- method_used
+  return(text)
+}
+
+split_quasi_sentences <- function(text, max_words = 18, min_chars = 12) {
+  raw_parts <- stringr::str_split(
+    text,
+    "(\\n+|\\s+•\\s+|(?<=[.!?;:])\\s+|\\s[-—]\\s)"
+  )[[1]]
+  
+  raw_parts <- stringr::str_trim(raw_parts)
+  raw_parts <- raw_parts[raw_parts != ""]
+  
+  finer_parts <- c()
+  
+  for (part in raw_parts) {
+    word_count <- stringr::str_count(part, "\\S+")
+    
+    if (word_count > max_words) {
+      subparts <- stringr::str_split(
+        part,
+        "(?<=,)\\s+|\\s+(?=and\\s|but\\s|or\\s|because\\s|while\\s|although\\s|however\\s)"
+      )[[1]]
+      finer_parts <- c(finer_parts, subparts)
+    } else {
+      finer_parts <- c(finer_parts, part)
+    }
+  }
+  
+  finer_parts <- stringr::str_trim(finer_parts)
+  finer_parts <- finer_parts[finer_parts != ""]
+  
+  final_parts <- c()
+  
+  for (part in finer_parts) {
+    words <- stringr::str_split(part, "\\s+")[[1]]
+    
+    if (length(words) <= max_words) {
+      final_parts <- c(final_parts, part)
+    } else {
+      chunk_starts <- seq(1, length(words), by = max_words)
+      for (start in chunk_starts) {
+        end <- min(start + max_words - 1, length(words))
+        chunk <- paste(words[start:end], collapse = " ")
+        final_parts <- c(final_parts, chunk)
+      }
+    }
+  }
+  
+  final_parts <- final_parts |>
+    stringr::str_replace_all("^[-,:;]+", "") |>
+    stringr::str_replace_all("\\s+", " ") |>
+    stringr::str_trim()
+  
+  final_parts <- final_parts[nchar(final_parts) >= min_chars]
+  
+  return(final_parts)
+}
+
+pdf_to_quasi_xlsx <- function(pdf_path, output_path = NULL, max_words = 18, dpi = 300, language = "eng") {
+  if (is.null(output_path)) {
+    output_path <- paste0(
+      tools::file_path_sans_ext(basename(pdf_path)),
+      "_quasi_sentences.xlsx"
+    )
+  }
+  
+  text <- extract_clean_text(pdf_path, dpi = dpi, language = language)
+  method_used <- attr(text, "method_used")
+  
+  quasi_sentences <- split_quasi_sentences(text, max_words = max_words)
+  
+  df <- tibble::tibble(
+    document = tools::file_path_sans_ext(basename(pdf_path)),
+    extraction_method = method_used,
+    quasi_sentence_id = seq_along(quasi_sentences),
+    quasi_sentence = quasi_sentences
+  )
+  
+  writexl::write_xlsx(df, output_path)
+  
+  message("Done! File saved as: ", output_path)
+  message("Extraction method used: ", method_used)
+  
+  return(df)
+}
+
+result <- pdf_to_quasi_xlsx(
+  pdf_path = pdf_path,
+  max_words = 18,
+  dpi = 300,
+  language = "eng"
+)
+
+print(head(result, 20))
+```
+
+## My Role in a Broader Research Project
+
+My research contributes to a broader project led by **Matto Mildenberger**, a faculty member at **UC Santa Barbara**, whose work examines political representation, public opinion, and climate politics. As one smaller component of this broader research agenda, my work focuses on identifying and measuring **political interest in sustainability** through party manifesto text from **South Africa and Japan**.
+
+For more on Professor Mildenberger’s broader research, visit his research-in-progress page: [“How constituent contact reinforces the status quo: Evidence from administrative records on contact to Congress” (with Olivia Quinn, David Broockman, Alexander Hertel-Fernandez, and Leah Stokes)](https://www.mattomildenberger.com/researchinprogress).
