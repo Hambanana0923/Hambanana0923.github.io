@@ -1,6 +1,58 @@
 ---
-title: "About"
+title: "About Me"
 format:
   html:
-    toc: false
+    toc: true
+    toc-location: right
 ---
+
+## Home
+
+I'm originally from Japan, moving to the US in 2016. I've grown in both Tokyo and Los Angeles, California. It was a big change relocating overseas, but I'm grateful for being able to experience lives in both countries.
+
+<div class="photo-row">
+  <figure class="photo-card">
+    <img src="Japan.jpg" alt="Tokyo at night">
+    <figcaption>Tokyo</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="PV.jpg" alt="California coast">
+    <figcaption>Palos Verdes, California</figcaption>
+  </figure>
+</div>
+
+## Personal Life
+
+Outside of school, I mainly like to spend time with my friends and being active! My favorite sports are soccer, basketball, and volleyball!
+<div class="photo-row">
+  <figure class="photo-card">
+    <img src="sk.jpg" alt="Tokyo at night">
+    <figcaption>Freshman Roommates</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="nsu.jpg" alt="California coast">
+    <figcaption>Nikkei Student Union club group picture</figcaption>
+  </figure>
+  
+  <figure class="photo-card">
+    <img src="culver.jpg" alt="Tokyo at night">
+    <figcaption>Hometown Friends</figcaption>
+  </figure>
+</div>
+
+## Hobbies
+
+I've had a crazy obsession for pokemon cards since I was young, and I've recently resumed collecting them. My other hobbies include playing the piano and watching movies/anime. My favorite recent watch was *Whiplash.*
+<div class="photo-row">
+  <figure class="photo-card">
+    <img src="Pokemon.jpg" alt="Tokyo at night">
+    <figcaption>Pokemon Card Obsession</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="reshiram.jpg" alt="California coast">
+    <figcaption>Best Card!</figcaption>
+  </figure>
+</div>

@@ -1,4 +1,6 @@
 /* css styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
 /* ===== Global styles ===== */
 body {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -8,10 +10,10 @@ body {
   font-size: 17px;
 }
 
-/* ===== Headings ===== */
+/* ===== Headings and bold text ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
-  color: #1f2a24;
+  color: #5f7a69;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -34,6 +36,10 @@ h3 {
   margin-top: 2rem;
 }
 
+strong, b {
+  color: #5f7a69;
+}
+
 /* ===== Paragraphs and lists ===== */
 p {
   margin-bottom: 1rem;
@@ -45,17 +51,17 @@ ul, ol {
 
 /* ===== Links ===== */
 a {
-  color: #4f7c65;
+  color: #5f7a69;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #2f5d4a;
+  color: #4f6a59;
   text-decoration: underline;
 }
 
-/* ===== Navbar ===== */
+/* ===== Navbar / top bar ===== */
 .navbar {
   background-color: #f8f7f4 !important;
   border-bottom: 1px solid #d8ddd6;
@@ -63,22 +69,44 @@ a:hover {
   padding-bottom: 0.8rem;
 }
 
+.navbar,
+.navbar-brand,
+.navbar-title,
+.navbar-brand .navbar-title,
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.dropdown-item,
+.dropdown-toggle,
+.navbar .bi,
+.navbar #quarto-search.type-overlay .aa-Autocomplete svg {
+  color: #5f7a69 !important;
+}
+
 .navbar-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #1f2a24 !important;
   letter-spacing: 0.03em;
 }
 
 .navbar-nav .nav-link {
-  color: #3a4a40 !important;
   font-weight: 500;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #4f7c65 !important;
+.navbar-nav .nav-link:hover,
+.dropdown-item:hover,
+.dropdown-toggle:hover {
+  color: #4f6a59 !important;
+}
+
+/* ===== Hamburger menu ===== */
+.navbar-toggler {
+  border-color: #5f7a69 !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(46%) sepia(11%) saturate(575%) hue-rotate(96deg) brightness(92%) contrast(86%);
 }
 
 /* ===== Main content width ===== */
@@ -111,12 +139,26 @@ section {
 }
 
 .nav-footer a {
-  color: #4f7c65;
+  color: #5f7a69;
   text-decoration: none;
 }
 
 .nav-footer a:hover {
-  color: #2f5d4a;
+  color: #4f6a59;
+}
+
+.nav-footer-right {
+  gap: 0.2rem !important;
+}
+
+.nav-footer-right .nav-link {
+  padding-left: 0.15rem !important;
+  padding-right: 0.15rem !important;
+  margin: 0 !important;
+}
+
+.nav-footer-right .bi {
+  font-size: 0.95rem;
 }
 
 /* ===== Images ===== */
@@ -125,6 +167,35 @@ img {
 }
 
 /* ===== Buttons ===== */
-.btn, .quarto-grid-link {
+.btn,
+.quarto-grid-link {
   border-radius: 12px;
+}
+.photo-row {
+  display: flex;
+  gap: 2rem;               /* space between images */
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.photo-card {
+  width: 45%;
+  margin: 0;
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 420px;           /* makes them similar in size */
+  object-fit: cover;       /* crops nicely instead of stretching */
+  border-radius: 24px;
+  display: block;
+}
+
+.photo-card figcaption {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #6f7d73;
 }
