@@ -1,9 +1,130 @@
 /* css styles */
-.nav-footer-right {
-  gap: 0.05rem !important;
+/* ===== Global styles ===== */
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f7f4;
+  color: #2f3a32;
+  line-height: 1.7;
+  font-size: 17px;
 }
 
-.nav-footer-right .nav-link {
-  padding-left: 0.08rem !important;
-  padding-right: 0.08rem !important;
+/* ===== Headings ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  color: #1f2a24;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+/* ===== Paragraphs and lists ===== */
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  padding-left: 1.4rem;
+}
+
+/* ===== Links ===== */
+a {
+  color: #4f7c65;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2f5d4a;
+  text-decoration: underline;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #f8f7f4 !important;
+  border-bottom: 1px solid #d8ddd6;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.navbar-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #1f2a24 !important;
+  letter-spacing: 0.03em;
+}
+
+.navbar-nav .nav-link {
+  color: #3a4a40 !important;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4f7c65 !important;
+}
+
+/* ===== Main content width ===== */
+.page-columns {
+  gap: 2rem;
+}
+
+.content {
+  max-width: 900px;
+}
+
+/* ===== Section spacing ===== */
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* ===== Callouts ===== */
+.callout {
+  border-radius: 14px;
+  border: 1px solid #d7ddd5;
+  background-color: #fcfcfa;
+}
+
+/* ===== Footer ===== */
+.nav-footer {
+  background-color: #f3f1ec;
+  color: #5f6a62;
+  border-top: 1px solid #d8ddd6;
+  font-size: 0.95rem;
+}
+
+.nav-footer a {
+  color: #4f7c65;
+  text-decoration: none;
+}
+
+.nav-footer a:hover {
+  color: #2f5d4a;
+}
+
+/* ===== Images ===== */
+img {
+  border-radius: 14px;
+}
+
+/* ===== Buttons ===== */
+.btn, .quarto-grid-link {
+  border-radius: 12px;
 }

@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Hambee Makinoda"
+  favicon: icon.jpg
   navbar:
     right:
       - href: index.qmd
@@ -14,6 +15,7 @@ website:
       - href: gallery.qmd
         text: Gallery
       - href: Education.qmd
+        text: Classes
       - href: resume.pdf
         text: Resume
         target: _blank
