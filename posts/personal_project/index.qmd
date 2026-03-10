@@ -1,16 +1,16 @@
 ---
-title: "Personal Project"
-description: "blog post description (appears underneath the title in smaller text) which is included on the listing page"
-2author:
+title: "2035 Initiative"
+description: "Political Manifesto Analysis"
+date: 03-10-2026
+author:
   - name: Hambee Makinoda
-    url: https://Hambanana0923.github.io/
-    orcid: 0000-0002-5300-3075
-    affiliation: Bachelor of Science in ES & Biological Sciences
-    affiliation-url: https://es.ucsb.edu/
-date: 10-24-2022
-3categories: [Quarto, R]
-4citation:
+    url: "https://Hambanana0923.github.io/"
+    affiliation: "Bachelor of Science in ES & Biological Sciences"
+    affiliation-url: "https://es.ucsb.edu/"
+categories: [R, Research, UCSB]
+citation:
   url: https://Hambanana0923.github.io/posts/personal_project/
-5image: preview-image.png
-6draft: false
+image: preview-image.png
+draft: false
 ---
+

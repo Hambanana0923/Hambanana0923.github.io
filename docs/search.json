@@ -32,34 +32,69 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "I’m originally from Japan, moving to the US in 2016. I’ve grown in both Tokyo and Los Angeles, California. It was a big change relocating overseas, but I’m grateful for being able to experience lives in both countries.\n\n\n\n\nTokyo\n\n\n\n\n\nCalifornia"
+    "text": "I’m originally from Japan and moved to the United States in 2016. Having grown up in both Tokyo and Los Angeles, I feel like my background has been shaped by two very different but equally meaningful places. Moving overseas was a major transition, and at the time it felt both exciting and overwhelming. Looking back, though, I’m really grateful for that experience. Living in both countries has given me a broader perspective and has shaped the way I connect with people, adapt to new environments, and see the world.\n\n\n\n\nTokyo\n\n\n\n\n\nCalifornia"
   },
   {
     "objectID": "about.html#home",
     "href": "about.html#home",
     "title": "About Me",
     "section": "",
-    "text": "I’m originally from Japan, moving to the US in 2016. I’ve grown in both Tokyo and Los Angeles, California. It was a big change relocating overseas, but I’m grateful for being able to experience lives in both countries.\n\n\n\n\nTokyo\n\n\n\n\n\nCalifornia"
+    "text": "I’m originally from Japan and moved to the United States in 2016. Having grown up in both Tokyo and Los Angeles, I feel like my background has been shaped by two very different but equally meaningful places. Moving overseas was a major transition, and at the time it felt both exciting and overwhelming. Looking back, though, I’m really grateful for that experience. Living in both countries has given me a broader perspective and has shaped the way I connect with people, adapt to new environments, and see the world.\n\n\n\n\nTokyo\n\n\n\n\n\nCalifornia"
   },
   {
     "objectID": "about.html#personal-life",
     "href": "about.html#personal-life",
     "title": "About Me",
     "section": "Personal Life",
-    "text": "Personal Life\nOutside of school, I mainly like to spend time with my friends and being active! My favorite sports are soccer, basketball, and volleyball!\n\n\n\n\nFreshman Roommates\n\n\n\n\n\nNikkei Student Union club group picture\n\n\n\n\n\nHometown Friends"
+    "text": "Personal Life\nOutside of school, I love spending time with my friends and staying active. Some of my favorite sports are soccer, basketball, and volleyball, and I enjoy both the competitive and social side of playing. At UCSB, I’m involved in multiple intramural sports teams, which has been a fun way to stay engaged in sports and meet new people (My 2 favorite things!). I also previously ran the LA Marathon, which was a really rewarding experience that pushed me both physically and mentally.\n\n\n\n\nFreshman Roommates\n\n\n\n\n\nNikkei Student Union club group picture\n\n\n\n\n\nHometown Friends\n\n\n\n\n\nLA Marathon"
   },
   {
     "objectID": "about.html#hobbies",
     "href": "about.html#hobbies",
     "title": "About Me",
     "section": "Hobbies",
-    "text": "Hobbies\nI’ve had a crazy obsession for pokemon cards since I was young, and I’ve recently resumed collecting them. My other hobbies include playing the piano and watching movies/anime. My favorite recent watch was Whiplash.\n\n\n\n\nPokemon Card Obsession\n\n\n\n\n\nBest Card!"
+    "text": "Hobbies\nI’ve had a longtime obsession with Pokémon cards ever since I was young, and recently I’ve started collecting them again. It’s a hobby that feels nostalgic, and I’ve really enjoyed getting back into it. Outside of that, I also love playing the piano and spending time watching movies and anime. Two of my favorite movies are La La Land and About Time. Follow my Letterboxd!: Harambananabee\n\n\n\n\nPokemon Card Obsession\n\n\n\n\n\nBest Card!\n\n\n\n\n\nLa La Land\n\n\n\n\n\nAbout Time"
   },
   {
     "objectID": "project.html",
     "href": "project.html",
     "title": "Projects",
     "section": "",
-    "text": "Coding Project\n\n\nblog post description (appears underneath the title in smaller text) which is included on the listing page\n\n\n\n\n\n\nOct 24, 2022\n\n\n\n\n\n\n\n\n\n\n\nPersonal Project\n\n\nblog post description (appears underneath the title in smaller text) which is included on the listing page\n\n\n\n\n\n\nOct 24, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "Personal Data Project\n\n\n\nQuarto\n\nR\n\nProject Report\n\n\n\nES 193DS: Screen Time vs Day Type (School/Non-School)\n\n\n\nHambee Makinoda\n\n\nMar 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n2035 Initiative\n\n\n\nR\n\nResearch\n\nUCSB\n\n\n\nPolitical Manifesto Analysis\n\n\n\nHambee Makinoda\n\n\nMar 10, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/code_project/index.html",
+    "href": "posts/code_project/index.html",
+    "title": "Personal Data Project",
+    "section": "",
+    "text": "A project for UCSB ENV S 193DS. I collected data on my screen time, including both phone and computer (collected through apple feature) with primary predictor variable day type (school/non-school) with several additional variables to answer my main question: Does my screen time change between school days or non-school days?"
+  },
+  {
+    "objectID": "posts/personal_project/index.html",
+    "href": "posts/personal_project/index.html",
+    "title": "2035 Initiative",
+    "section": "",
+    "text": "CitationBibTeX citation:@online{makinoda2026,\n  author = {Makinoda, Hambee},\n  title = {2035 {Initiative}},\n  date = {2026-03-10},\n  url = {https://Hambanana0923.github.io/posts/personal_project/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nMakinoda, Hambee. 2026. “2035 Initiative.” March 10, 2026.\nhttps://Hambanana0923.github.io/posts/personal_project/."
+  },
+  {
+    "objectID": "posts/code_project/index.html#set-up",
+    "href": "posts/code_project/index.html#set-up",
+    "title": "Personal Data Project",
+    "section": "Set Up",
+    "text": "Set Up\nLoading in packages and storing the data of screen time vs predictor variables in an object called personal\n\nlibrary(tidyverse) # reading in tidyverse\nlibrary(here) # reading in here package\nlibrary(janitor) # read in janitor package\nlibrary(readxl) # read in readxl package \nlibrary(ggeffects) # read in ggeffects package\nlibrary(DT) # read in DT package\nlibrary(readr) # read in readr package\nlibrary(dplyr) # read in dplyr package\n\npersonal &lt;- read_csv(here(\"posts\", \"code_project\", \"personaldata.csv\")) # store env193ds_personaldata.csv data in object personal"
+  },
+  {
+    "objectID": "posts/code_project/index.html#data-visualization",
+    "href": "posts/code_project/index.html#data-visualization",
+    "title": "Personal Data Project",
+    "section": "Data Visualization",
+    "text": "Data Visualization\nI am visualizing the collected data in boxplot and jitter geometries through ggplot on R. Details of the code explained in the caption.\n\npersonal_clean &lt;- personal |&gt; # start with storing personal data frame in personal_clean\n  clean_names() # clean names so it only contains lowercase and underscore\n\nggplot(data = personal_clean, # start ggplot call with my_data_clean data frame\n       aes(x = day_type, # choose x-axis\n           y = screen_time_min,# choose y-axis\n           color = day_type)) + # change color based on day_type \n  geom_boxplot() + # first layer: boxplot\n  geom_jitter(height = 0, # second layer: jitter\n              width = 0.2, # no height jitter, limit horizontal jitter\n              alpha = 0.7) + # lower opacity of jitter\n  labs(title = \"Screen Time Differs between School Day and Non-School Day\", # label title\n       subtitle = \"2026-03-03\", # label subtitle with most recent observation date\n       x = \"Day Type\", # relabel x-axis\n       y = \"Screen Time (min)\") + # relabel y-axis\n  theme_classic() + # change ggplot theme\n  theme( # use theme() function\n    plot.title = element_text (size = 11), # change title size\n    plot.subtitle = element_text (size = 10)) + # change subtitle size \n    scale_color_manual(values = c( # Manually select colors of the graph \n      \"School\" = \"darkgreen\",\n      \"Non-School\" = \"brown4\" )) + # manually change colors of the graph to be different from default\n  theme(legend.position = \"none\") #taking out legend\n\n\n\n\n\n\n\n\n\nCaption\nFigure 1. Screen time differs between school days and non-school days.\nSmall semi-transparent points represent individual measurements of daily screen time (minutes) for school and non-school days. Non-school days are shown in red and school days in green. Boxplots summarize the distribution of screen time for each group, with the center line representing the median, the boxes representing the interquartile range (IQR), and the whiskers showing the spread of the data beyond the quartiles. Data collected March 3, 2026."
+  },
+  {
+    "objectID": "posts/code_project/index.html#interactive-data-table",
+    "href": "posts/code_project/index.html#interactive-data-table",
+    "title": "Personal Data Project",
+    "section": "Interactive Data Table",
+    "text": "Interactive Data Table\nCreating an interactive data table to show the collected personal data. All of the data can be sorted and searched for each column.\n\n\n\n\n\n\nBrief data dictionary for mydata\n\n\n\n\n\nResponse Variable: Screen Time\nMain predictor variable: Day Type (School Day or Non-School Day)\nOther response variables collected:\nTotal Class Time (min)\nSleep Time (min)\nSocial Plans (yes or no)\nWork/Study Time (min)\nDate (yyyy-mm-dd)\nDay of the Week (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday)\n\n\n\n\ndatatable( # interative data table\n  personal, # dataset to display\n  rownames = FALSE, # removes the extra row-number column\n  filter = \"top\", # adds filter/search boxes at the top of each column\n  options = list(\n    pageLength = 8, # shows 8 rows per page\n    autoWidth = TRUE, # adjusts column widths automatically\n    scrollX = TRUE # allows horizontal scrolling if table is too wide\n  ),\n  caption = \"Interactive table of my personal data\"   # title above the table\n)"
   }
 ]
