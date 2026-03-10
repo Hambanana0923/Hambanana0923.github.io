@@ -18,7 +18,7 @@ I'm originally from Japan, moving to the US in 2016. I've grown in both Tokyo an
 
   <figure class="photo-card">
     <img src="PV.jpg" alt="California coast">
-    <figcaption>Palos Verdes, California</figcaption>
+    <figcaption>California</figcaption>
   </figure>
 </div>
 

@@ -13,8 +13,6 @@ website:
         text: About Me
       - href: project.qmd
         text: Project
-      - href: gallery.qmd
-        text: Gallery
       - href: Education.qmd
         text: Classes
       - href: resume.pdf

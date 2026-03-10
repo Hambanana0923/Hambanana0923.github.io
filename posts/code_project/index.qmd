@@ -1,0 +1,16 @@
+---
+title: "Coding Project"
+description: "blog post description (appears underneath the title in smaller text) which is included on the listing page"
+2author:
+  - name: Hambee Makinoda
+    url: https://Hambanana0923.github.io/
+    orcid: 0000-0002-5300-3075
+    affiliation: Bachelor of Science in ES & Biological Sciences
+    affiliation-url: https://es.ucsb.edu/
+date: 10-24-2022
+3categories: [Quarto, R, Project Report]
+4citation:
+  url: https://Hambanana0923.github.io/posts/personal_project/
+5image: cover_coding.png
+6draft: false
+---
