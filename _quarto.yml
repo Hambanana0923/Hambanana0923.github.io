@@ -5,14 +5,21 @@ project:
 website:
   title: "Hambee Makinoda"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - project.qmd
-      - gallery.qmd
-      - Education.qmd
-      - resume.qmd
+      - href: about.qmd
+      - href: project.qmd
+        text: Project
+      - href: gallery.qmd
+        text: Gallery
+      - href: Education.qmd
+      - href: resume.pdf
+        text: Resume
+        target: _blank
+      - icon: github
+        href: //github.com/Hambanana0923
+        target: _blank
 
 format:
   html:
