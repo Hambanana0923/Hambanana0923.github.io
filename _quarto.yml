@@ -20,6 +20,10 @@ website:
       - icon: github
         href: //github.com/Hambanana0923
         target: _blank
+  page-footer:
+    left: Copyright 2026, Hambee Makinoda
+    right: This website is built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/Hambanana0923/Hambanana0923.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
+      
 
 format:
   html:
