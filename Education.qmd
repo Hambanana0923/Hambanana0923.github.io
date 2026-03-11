@@ -1,5 +1,66 @@
 ---
-title: "Education"
-format: html
+title: "Education & Classes"
+format: 
+    html:
+      toc: true
+      toc-location: right
 ---
+
+# University of California, Santa Barbara
+
+I am currently pursuing 2 majors in Bachelor of Science at UCSB (Expected Graduation: June 2027)
+
+Here are my relevant upper division courseworks in each major
+
+## Environmental Sciences B.S.
+
+### ENV 193DS - Stats for Environmental Studies
+Statistical analysis of biological data, along with visualization and coding.\
+
+### ENV 163A - Water Supply & Management
+Discussion of distribution and allocation of water supply from environmental lenses.\
+
+### ENV 135A - Principal Environmental Planning
+Environmental planning/consulting career class, with emphasis on legal components of sustainability when it comes to urban planning careers.\
+
+### ENV 101 - Ecosystem Biodiversity
+Discussion of biodiversity, with more emphasis and interaction with humans.\
+
+### ENV 190 - Current Topics ES
+Seminar from Eric Zimmerman and other professionals in environmental career field.\
+
+### ENV 105 - Renewable Energy Systems
+This class involved discussions of pros and cons of each renewable energy resources, and the calculation of cost to deploy them. Here are the examples of deployment cost/electricity analysis:
+```{=html}
+<iframe 
+  src="https://docs.google.com/spreadsheets/d/1JnEomX7gnqdm_1XUuIllWGpKF-QpDzn_/edit?usp=sharing&ouid=106119888147206501217&rtpof=true&sd=true"
+  width="100%" 
+  height="900" 
+  frameborder="0" 
+  marginheight="0" 
+  marginwidth="0">
+</iframe>
+```
+Wind Turbine Deployment Analysis Example\
+\
+```{=html}
+<iframe 
+  src="https://docs.google.com/spreadsheets/d/1pS0xcLGOTewDHmEbPnN1HLoZ1t2xscEs/edit?usp=sharing&ouid=106119888147206501217&rtpof=true&sd=true"
+  width="100%" 
+  height="900" 
+  frameborder="0" 
+  marginheight="0" 
+  marginwidth="0">
+</iframe>
+```
+Solar PV Deployment Analysis Example
+
+
+## Biological Sciences B.S.
+
+### MCDB 101A & B
+Molecular genetics and inheritace analysis (pedigree, allele).\
+
+### Chem 109 A & B + Chem 6AL
+Organic chemistry series and laboratory.
 
